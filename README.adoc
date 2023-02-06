@@ -388,3 +388,14 @@ When you need to stop the application, press `CTRL+C`.
 You just ran a basic Spring Boot application with Open Liberty.
 
 include::{common-includes}/attribution.adoc[subs="attributes"]
+
+
+
+### Log when server is turned off.
+```
+C[INFO] [AUDIT   ] CWWKT0017I: Web application removed (default_host): http://192.168.1.6:9080/
+[INFO] [AUDIT   ] CWWKE0085I: The server defaultServer is stopping because the JVM is exiting.
+[INFO] [AUDIT   ] CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[INFO] [AUDIT   ] CWWKT0017I: Web application removed (default_host): https://192.168.1.6:9443/ibm/saml20/
+[INFO] [AUDIT   ] CWWKE0055I: Server shutdown requested on Monday, 6 February, 2023 at 4:57 PM. The server defaultServer is shutting down.
+```
