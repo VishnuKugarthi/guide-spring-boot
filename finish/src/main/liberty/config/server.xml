@@ -1,26 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <server description="new server">
-
     <featureManager>
-    <!-- tag::servlet[] -->
-        <feature>servlet-4.0</feature>
-    <!-- end::servlet[] -->
-    <!-- tag::springboot[] -->
         <feature>springBoot-2.0</feature>
-    <!-- end::springboot[] -->
+        <feature>jsp-2.3</feature>
+        <feature>localConnector-1.0</feature>
+        <feature>samlWeb-2.0</feature>
+        <feature>servlet-3.1</feature>
+        <feature>transportSecurity-1.0</feature>
+        <feature>jdbc-4.1</feature>
     </featureManager>
-
-    <!-- tag::httpport[] -->
-    <httpEndpoint id="defaultHttpEndpoint"
-                  host="*"
-                  httpPort="9080"
-                  httpsPort="9443" />
-    <!-- end::httpport[] -->
-
-    <!-- tag::springBootApplication[] -->
-    <springBootApplication id="guide-spring-boot" 
-                           location="thin-guide-spring-boot-0.1.0.jar"
-                           name="guide-spring-boot" />
-    <!-- end::springBootApplication[] -->
-
+    <sslDefault sslRef="DefaultSSLSettings" />
+    <ssl clientAuthenticationSupported="true" id="DefaultSSLSettings" keyStoreRef="defaultKeyStore" />
+    <keyStore id="defaultKeyStore"
+        location="/Users/vishnukugarthi/Documents/Liberty_configuration/security/keystore.jks"
+        password="changeit" />
+    <httpEndpoint id="defaultHttpEndpoint" host="*"
+        httpPort="9080" httpsPort="9443" />
+    <samlWebSso20
+        httpsRequired="true"
+        id="defaultSP"
+        idpMetadata="/Users/vishnukugarthi/Documents/Liberty_configuration/security/Metadata_preprod.login.w3.ibm.com_PREPROD.xml"
+        mapToUserRegistry="No"
+        signatureMethodAlgorithm="SHA256"
+        spHostAndPort="https://localhost:9443" />
+    <applicationManager autoExpand="true" />
+    <applicationMonitor updateTrigger="mbean" />
+    <webApplication contextRoot="/" id="MinimalSamlSample" location="MinimalSamlSample.war"
+        name="MinimalSamlSample">
+        <application-bnd>
+            <security-role name="User">
+                <special-subject type="ALL_AUTHENTICATED_USERS" />
+            </security-role>
+        </application-bnd>
+    </webApplication>
 </server>
