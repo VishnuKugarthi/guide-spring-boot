@@ -8,13 +8,14 @@
         <!-- tag::springboot[] -->
         <feature>springBoot-2.0</feature>
         <!-- end::springboot[] -->
+        <feature>transportSecurity-1.0</feature>
     </featureManager>
 
     <!-- tag::httpport[] -->
     <httpEndpoint id="defaultHttpEndpoint"
         host="*"
-        httpPort="9080"
-        httpsPort="9443" />
+        httpPort="9085"
+        httpsPort="9555" />
     <!-- end::httpport[] -->
 
     <!-- tag::springBootApplication[] -->
