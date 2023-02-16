@@ -5,10 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    
-    @RequestMapping("/hello")
+
+    @RequestMapping("/")
     public String hello() {
         return "Greetings from Spring Boot!";
     }
-    
+
+    @RequestMapping("/bye")
+    public String bye() {
+        return "Tata byeeeeeee!!!!!!";
+    }
+
+    @RequestMapping("/welcome")
+    public String welcome() {
+        return "welcome!!!!!!";
+    }
 }
