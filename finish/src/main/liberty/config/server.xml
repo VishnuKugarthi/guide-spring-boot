@@ -21,7 +21,7 @@
         idpMetadata="/Users/vishnukugarthi/Documents/Liberty_sso/security/idpMetadata.xml"
         mapToUserRegistry="No"
         signatureMethodAlgorithm="SHA256"
-        spHostAndPort="https://localhost:9555" />
+        spHostAndPort="https://icfs.local:9555" />
     <applicationManager autoExpand="true" />
     <applicationMonitor updateTrigger="mbean" />
     <!-- <webApplication contextRoot="/" id="MinimalSamlSample" location="MinimalSamlSample.war"
