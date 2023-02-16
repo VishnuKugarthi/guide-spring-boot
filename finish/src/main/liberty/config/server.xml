@@ -18,18 +18,21 @@
     <samlWebSso20
         httpsRequired="true"
         id="defaultSP"
-        idpMetadata="/Users/vishnukugarthi/Documents/Liberty_sso/security/Metadata_preprod.login.w3.ibm.com_PREPROD.xml"
+        idpMetadata="/Users/vishnukugarthi/Documents/Liberty_sso/security/idpMetadata.xml"
         mapToUserRegistry="No"
         signatureMethodAlgorithm="SHA256"
-        spHostAndPort="https://localhost:9443" />
+        spHostAndPort="https://localhost:9555" />
     <applicationManager autoExpand="true" />
     <applicationMonitor updateTrigger="mbean" />
-    <webApplication contextRoot="/" id="MinimalSamlSample" location="MinimalSamlSample.war"
+    <!-- <webApplication contextRoot="/" id="MinimalSamlSample" location="MinimalSamlSample.war"
         name="MinimalSamlSample">
         <application-bnd>
             <security-role name="User">
                 <special-subject type="ALL_AUTHENTICATED_USERS" />
             </security-role>
         </application-bnd>
-    </webApplication>
+    </webApplication> -->
+    <springBootApplication id="guide-spring-boot"
+        location="thin-guide-spring-boot-0.1.0.jar"
+        name="guide-spring-boot" />
 </server>
