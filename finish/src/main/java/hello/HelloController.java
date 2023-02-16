@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/")
-    public String hello() {
-        return "Greetings from Spring Boot!";
-    }
+    // @RequestMapping("/")
+    // public String hello() {
+    //     return "Greetings from Spring Boot!";
+    // }
 
     @RequestMapping("/bye")
     public String bye() {
