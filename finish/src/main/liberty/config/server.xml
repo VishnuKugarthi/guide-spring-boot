@@ -32,19 +32,19 @@
 
     <applicationMonitor updateTrigger="mbean" />
 
-    <!-- <webApplication contextRoot="/" id="guide-spring-boot"
-        location="thin-guide-spring-boot-0.1.0.war"
+    <webApplication contextRoot="/" id="guide-spring-boot"
+        location="guide-spring-boot-0.1.0.war"
         name="guide-spring-boot">
         <application-bnd>
             <security-role name="User">
                 <special-subject type="ALL_AUTHENTICATED_USERS" />
             </security-role>
         </application-bnd>
-    </webApplication> -->
+    </webApplication>
 
-    <webApplication contextRoot="/" id="guide-spring-boot"
+    <!-- <webApplication contextRoot="/" id="guide-spring-boot"
     location="guide-spring-boot-0.1.0.war"
-    name="guide-spring-boot" />
+    name="guide-spring-boot" /> -->
 
     <!-- <springBootApplication id="guide-spring-boot"
         location="thin-guide-spring-boot-0.1.0.jar"
