@@ -9,13 +9,13 @@
         <feature>jdbc-4.1</feature>
     </featureManager>
 
-    <!-- <sslDefault sslRef="DefaultSSLSettings" />
+    <sslDefault sslRef="DefaultSSLSettings" />
 
     <ssl clientAuthenticationSupported="true" id="DefaultSSLSettings" keyStoreRef="defaultKeyStore" />
 
     <keyStore id="defaultKeyStore"
         location="/Users/vishnukugarthi/Documents/Liberty_sso/security/key.jks"
-        password="changeit" /> -->
+        password="changeit" />
 
     <httpEndpoint id="defaultHttpEndpoint" host="*"
         httpPort="9085" httpsPort="9555" />
@@ -47,6 +47,6 @@
     name="guide-spring-boot" /> -->
 
     <!-- <springBootApplication id="guide-spring-boot"
-        location="thin-guide-spring-boot-0.1.0.jar"
+        location="guide-spring-boot-0.1.0.war"
         name="guide-spring-boot" /> -->
 </server>
