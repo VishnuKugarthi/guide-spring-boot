@@ -9,26 +9,27 @@
         <feature>jdbc-4.1</feature>
     </featureManager>
 
-    <sslDefault sslRef="DefaultSSLSettings" />
+    <!-- <sslDefault sslRef="DefaultSSLSettings" />
 
     <ssl clientAuthenticationSupported="true" id="DefaultSSLSettings" keyStoreRef="defaultKeyStore" />
 
     <keyStore id="defaultKeyStore"
         location="/Users/vishnukugarthi/Documents/Liberty_sso/security/key.jks"
-        password="changeit" />
+        password="changeit" /> -->
 
     <httpEndpoint id="defaultHttpEndpoint" host="*"
         httpPort="9085" httpsPort="9555" />
 
-    <samlWebSso20
+    <!-- <samlWebSso20
         httpsRequired="true"
         id="defaultSP"
         idpMetadata="/Users/vishnukugarthi/Documents/Liberty_sso/security/idpMetadata.xml"
         mapToUserRegistry="No"
         signatureMethodAlgorithm="SHA256"
-        spHostAndPort="https://icfs.local:9555" />
+        spHostAndPort="https://icfs.local:9555" /> -->
 
     <applicationManager autoExpand="true" />
+
     <applicationMonitor updateTrigger="mbean" />
 
     <!-- <webApplication contextRoot="/" id="guide-spring-boot"
@@ -42,15 +43,8 @@
     </webApplication> -->
 
     <webApplication contextRoot="/" id="guide-spring-boot"
-        location="guide-spring-boot-0.1.0.war"
-        name="guide-spring-boot">
-        <application-bnd>
-            <security-role name="User">
-                <special-subject type="ALL_AUTHENTICATED_USERS" />
-            </security-role>
-        </application-bnd>
-    </webApplication>
-
+    location="guide-spring-boot-0.1.0.war"
+    name="guide-spring-boot" />
 
     <!-- <springBootApplication id="guide-spring-boot"
         location="thin-guide-spring-boot-0.1.0.jar"
