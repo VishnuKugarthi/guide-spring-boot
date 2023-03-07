@@ -4,14 +4,14 @@ FROM icr.io/appcafe/open-liberty:full-java11-openj9-ubi as staging
 # end::OLimage1[]
 
 # tag::copyJar[]
-COPY --chown=1001:0 target/guide-spring-boot-0.1.0.jar \
-                    /staging/fat-guide-spring-boot-0.1.0.jar
+COPY --chown=1001:0 target/7mar-guide-spring-boot-0.1.0.jar \
+                    /staging/fat-7mar-guide-spring-boot-0.1.0.jar
 # end::copyJar[]
 
 # tag::springBootUtility[]
 RUN springBootUtility thin \
- --sourceAppPath=/staging/fat-guide-spring-boot-0.1.0.jar \
- --targetThinAppPath=/staging/thin-guide-spring-boot-0.1.0.jar \
+ --sourceAppPath=/staging/fat-7mar-guide-spring-boot-0.1.0.jar \
+ --targetThinAppPath=/staging/thin-7mar-guide-spring-boot-0.1.0.jar \
  --targetLibCachePath=/staging/lib.index.cache
 # end::springBootUtility[]
 
@@ -27,7 +27,7 @@ LABEL \
   org.opencontainers.image.authors="Your Name" \
   org.opencontainers.image.vendor="Open Liberty" \
   org.opencontainers.image.url="local" \
-  org.opencontainers.image.source="https://github.com/OpenLiberty/guide-spring-boot" \
+  org.opencontainers.image.source="https://github.com/OpenLiberty/7mar-guide-spring-boot" \
   org.opencontainers.image.version="$VERSION" \
   org.opencontainers.image.revision="$REVISION" \
   vendor="Open Liberty" \
@@ -44,8 +44,8 @@ RUN cp /opt/ol/wlp/templates/servers/springBoot2/server.xml /config/server.xml
 COPY --chown=1001:0 --from=staging /staging/lib.index.cache /lib.index.cache
 # end::libcache[]
 # tag::thinjar[]
-COPY --chown=1001:0 --from=staging /staging/thin-guide-spring-boot-0.1.0.jar \
-                    /config/dropins/spring/thin-guide-spring-boot-0.1.0.jar
+COPY --chown=1001:0 --from=staging /staging/thin-7mar-guide-spring-boot-0.1.0.jar \
+                    /config/dropins/spring/thin-7mar-guide-spring-boot-0.1.0.jar
 # end::thinjar[]
 
 RUN configure.sh 

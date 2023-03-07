@@ -1,12 +1,16 @@
 <server description="new server">
     <featureManager>
-        <feature>springBoot-2.0</feature>
+        <feature>appSecurity-2.0</feature>
         <feature>jsp-2.3</feature>
-        <feature>localConnector-1.0</feature>
-        <feature>samlWeb-2.0</feature>
+        <feature>jdbc-4.2</feature>
+        <feature>jndi-1.0</feature>
         <feature>servlet-4.0</feature>
         <feature>transportSecurity-1.0</feature>
-        <feature>jdbc-4.1</feature>
+        <feature>ldapRegistry-3.0</feature>
+        <feature>jaxrs-2.1</feature>
+        <feature>ssl-1.0</feature>
+        <feature>samlWeb-2.0</feature>
+        <feature>SpringBoot-2.0</feature>
     </featureManager>
 
     <sslDefault sslRef="DefaultSSLSettings" />
@@ -29,21 +33,21 @@
     <applicationManager autoExpand="true" />
     <applicationMonitor updateTrigger="mbean" />
 
-    <webApplication contextRoot="/" id="guide-spring-boot"
-        location="guide-spring-boot-0.1.0.war"
-        name="guide-spring-boot">
+    <!-- <webApplication contextRoot="/" id="7mar-guide-spring-boot"
+        location="7mar-guide-spring-boot-0.1.0.war"
+        name="7mar-guide-spring-boot">
         <application-bnd>
             <security-role name="User">
                 <special-subject type="ALL_AUTHENTICATED_USERS" />
             </security-role>
         </application-bnd>
-    </webApplication>
+    </webApplication> -->
 
-    <!-- <webApplication contextRoot="/" id="guide-spring-boot"
-        location="guide-spring-boot-0.1.0.war"
-        name="guide-spring-boot" /> -->
+    <webApplication contextRoot="/" id="7mar-guide-spring-boot"
+        location="7mar-guide-spring-boot-0.1.0.war"
+        name="7mar-guide-spring-boot" />
 
-    <!-- <springBootApplication id="guide-spring-boot"
-        location="thin-guide-spring-boot-0.1.0.jar"
-        name="guide-spring-boot" /> -->
+    <!-- <springBootApplication id="7mar-guide-spring-boot"
+        location="7mar-guide-spring-boot-0.1.0.jar"
+        name="7mar-guide-spring-boot" /> -->
 </server>
