@@ -18,7 +18,7 @@
         password="changeit" /> -->
 
     <httpEndpoint id="defaultHttpEndpoint" host="*"
-        httpPort="9089" httpsPort="9898" />
+        httpPort="9082" httpsPort="9556" />
 
     <!-- <samlWebSso20
         httpsRequired="true"
