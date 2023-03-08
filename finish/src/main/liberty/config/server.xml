@@ -23,8 +23,9 @@
         httpPort="9085" httpsPort="9559" />
 
     <samlWebSso20
-        httpsRequired="true"
         id="defaultSP"
+        keyStoreRef="defaultKeyStore"
+        httpsRequired="true"
         idpMetadata="/Users/vishnukugarthi/Documents/Liberty_sso/security/Metadata_preprod.login.w3.ibm.com_PREPROD.xml"
         mapToUserRegistry="No"
         signatureMethodAlgorithm="SHA256"
